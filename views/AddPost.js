@@ -27,7 +27,8 @@ export default function AddPost() {
 
   // Fonction de push du post dans le context de l'app pour réutilisation dans Timeline
   const handleSubmit = () => {
-    userState.setUserPost(...userState.userPost, [textInput]);
+    console.log("STATE", userState.userPost);
+    userState.userPost.push([textInput]);
   };
 
   return (

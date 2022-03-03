@@ -13,6 +13,7 @@ import PostCard from "../components/PostCard";
 export default function Timeline() {
   // State du context
   const userState = useContext(UserContext);
+  console.log("TEST", userState.userPost);
 
   return (
     <SafeAreaView>
