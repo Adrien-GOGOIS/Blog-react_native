@@ -5,6 +5,8 @@ import { useContext, useState } from "react";
 
 // Context
 import { UserContext } from "../App";
+import { TouchableOpacity } from "react-native";
+import Comment from "./Comment";
 
 export default function PostCard(props) {
   // State du context

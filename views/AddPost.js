@@ -20,11 +20,6 @@ export default function AddPost() {
   // State du post dans l'input
   const [textInput, setTextInput] = useState([]);
 
-  // Fonction récupération du texte de l'utilisateur dans l'input
-  //   const handleChange = (e) => {
-  //     setTextInput([e.target.value]);
-  //   };
-
   // Fonction de push du post dans le context de l'app pour réutilisation dans Timeline
   const handleSubmit = () => {
     fetch("https://jsonplaceholder.typicode.com/posts", {
