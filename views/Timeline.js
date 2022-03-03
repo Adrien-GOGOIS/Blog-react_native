@@ -20,11 +20,10 @@ export default function Timeline() {
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Timeline</Text>
       <FlatList
-        data={userState.userPost.reverse()}
+        data={userState.userPost}
         renderItem={(data) => (
           <View>
             <PostCard text={data.item} />
-            <Comment />
           </View>
         )}
         keyExtractor={(data, index) => index.toString()}

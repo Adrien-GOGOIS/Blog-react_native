@@ -1,3 +1,4 @@
+import { useState, useContext } from "react";
 import {
   View,
   Text,
@@ -7,19 +8,27 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-// Imports react
-import { useContext, useState } from "react";
+import { CommentContext } from "./PostCard";
 
 export default function Comment() {
+  const comment = useContext(CommentContext);
+
+  const [userInput, setUserInput] = useState();
+
+  // Fonction ajout de commentaire
+  const handlePress = () => {
+    comment.setUserComment([userInput]);
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
         <TextInput
           style={styles.input}
           placeholder="Ajouter un commentaire"
-          //   onChangeText={setTextInput}
+          onChangeText={setUserInput}
         />
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={handlePress}>
           <Text>Submit</Text>
         </TouchableOpacity>
       </View>
@@ -42,6 +51,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     backgroundColor: "rgba(200, 200, 200, 0.6)",
     borderRadius: 15,
+    marginTop: 5,
   },
 
   button: {
