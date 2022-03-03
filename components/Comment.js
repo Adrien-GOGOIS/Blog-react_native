@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     borderRadius: 5,
     margin: 5,
+    padding: 10,
   },
 
   button: {

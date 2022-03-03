@@ -13,8 +13,12 @@ export default function Profile() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Profil</Text>
-      <Text>Nom d'utilisateur : {userState.userName}</Text>
-      <Text>Nombre de Posts : {userState.userPost.length}</Text>
+      <Text style={styles.username}>
+        Nom d'utilisateur : {userState.userName}
+      </Text>
+      <Text style={styles.posts}>
+        Nombre de Posts : {userState.userPost.length}
+      </Text>
     </SafeAreaView>
   );
 }
@@ -24,12 +28,30 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
   },
 
   title: {
     fontSize: 40,
     margin: 30,
     fontWeight: "bold",
+  },
+
+  username: {
+    fontSize: 20,
+    margin: 5,
+    backgroundColor: "rgba(151, 10, 10, 1)",
+    color: "white",
+    padding: 10,
+    paddingLeft: 15,
+    paddingRight: 15,
+    borderWidth: 1,
+    borderRadius: 10,
+    overflow: "hidden",
+  },
+
+  posts: {
+    fontSize: 20,
+    margin: 5,
+    color: "rgba(151, 10, 10, 1)",
   },
 });
