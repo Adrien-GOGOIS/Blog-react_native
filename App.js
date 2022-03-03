@@ -17,12 +17,17 @@ import Login from "./views/Login";
 // context
 export const UserContext = createContext();
 
+// FONCTIONS APP
 export default function App() {
   // State
   const [userName, setUserName] = useState("");
+  const [userPost, setUserPost] = useState([]);
+
   const value = {
     userName: userName,
     setUserName: setUserName,
+    userPost: userPost,
+    setUserPost: setUserPost,
   };
 
   return (
