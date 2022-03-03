@@ -1,15 +1,15 @@
 import { TouchableOpacity, View, Text, StyleSheet } from "react-native";
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={props.onHome}>
         <Text>Home</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={props.onPost}>
         <Text>Post</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={props.onProfile}>
         <Text>Profile</Text>
       </TouchableOpacity>
     </View>

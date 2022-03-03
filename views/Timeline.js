@@ -1,9 +1,9 @@
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView } from "react-native";
 
 export default function Timeline() {
   return (
-    <View>
+    <SafeAreaView>
       <Text>Timeline</Text>
-    </View>
+    </SafeAreaView>
   );
 }
