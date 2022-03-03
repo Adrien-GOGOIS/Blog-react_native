@@ -15,24 +15,24 @@ import Home from "./views/Home";
 import Login from "./views/Login";
 
 // context
-export const LogContext = createContext();
+export const UserContext = createContext();
 
 export default function App() {
   // State
-  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [userName, setUserName] = useState("");
   const value = {
-    isLoggedIn: isLoggedIn,
-    setLoggedIn: setLoggedIn,
+    userName: userName,
+    setUserName: setUserName,
   };
 
   return (
-    <LogContext.Provider value={value}>
+    <UserContext.Provider value={value}>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Login">
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Login" component={Login} />
         </Stack.Navigator>
       </NavigationContainer>
-    </LogContext.Provider>
+    </UserContext.Provider>
   );
 }
