@@ -33,7 +33,7 @@ export default function Login({ navigation }) {
         onChangeText={userState.setUserName}
       />
       <TouchableOpacity onPress={handleSubmit} style={styles.button}>
-        <Text>Submit</Text>
+        <Text style={styles.textButton}>Se connecter</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
@@ -65,5 +65,9 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(100, 150, 255, 0.7)",
     borderRadius: 5,
     margin: 20,
+  },
+
+  textButton: {
+    textAlign: "center",
   },
 });

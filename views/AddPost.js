@@ -46,7 +46,7 @@ export default function AddPost() {
           onChangeText={setTextInput}
         />
         <TouchableOpacity onPress={handleSubmit} style={styles.button}>
-          <Text>Submit</Text>
+          <Text style={styles.textButton}>Soumettre</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -63,8 +63,8 @@ const styles = StyleSheet.create({
 
   input: {
     borderColor: "black",
-    width: 500,
-    height: 300,
+    width: 300,
+    height: 100,
     textAlign: "center",
     backgroundColor: "rgba(200, 200, 200, 0.6)",
     borderRadius: 15,
@@ -74,11 +74,15 @@ const styles = StyleSheet.create({
     borderColor: "black",
     borderWidth: 1,
     textAlign: "center",
-    height: 50,
+    height: 20,
     width: 200,
     backgroundColor: "rgba(100, 150, 255, 0.7)",
     borderRadius: 5,
     margin: 20,
+  },
+
+  textButton: {
+    textAlign: "center",
   },
 
   title: {

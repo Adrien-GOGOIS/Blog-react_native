@@ -29,7 +29,7 @@ export default function Comment() {
           onChangeText={setUserInput}
         />
         <TouchableOpacity style={styles.button} onPress={handlePress}>
-          <Text>Submit</Text>
+          <Text>Commenter</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>

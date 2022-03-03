@@ -34,8 +34,11 @@ export default function PostCard(props) {
         <FlatList
           data={userComment}
           renderItem={(data) => (
-            <View>
-              <Text>{data.item}</Text>
+            <View style={styles.commentContainer}>
+              <Text style={styles.comment}>
+                <Text style={styles.user}>{userState.userName}</Text> :{" "}
+                {data.item}
+              </Text>
             </View>
           )}
           keyExtractor={(data, index) => index.toString()}
@@ -66,8 +69,24 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 
+  user: {
+    color: "grey",
+    fontStyle: "italic",
+  },
+
   text: {
     fontSize: 20,
     margin: 5,
+  },
+
+  comment: {
+    color: "blue",
+    textAlign: "right",
+    marginRight: 10,
+    marginBottom: 10,
+  },
+
+  commentContainer: {
+    position: "relative",
   },
 });

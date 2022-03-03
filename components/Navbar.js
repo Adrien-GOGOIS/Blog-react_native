@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-evenly",
     position: "absolute",
-    height: 30,
+    height: 80,
     width: "100%",
     bottom: 1,
   },
