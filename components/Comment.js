@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    padding: 10,
   },
 
   input: {
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     backgroundColor: "rgba(200, 200, 200, 0.6)",
     borderRadius: 15,
-    marginTop: 5,
+    margin: 5,
   },
 
   button: {

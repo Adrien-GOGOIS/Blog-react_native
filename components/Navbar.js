@@ -4,13 +4,13 @@ export default function Navbar(props) {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.button} onPress={props.onHome}>
-        <Text>Home</Text>
+        <Text style={styles.textButton}>Home</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={props.onPost}>
-        <Text>Post</Text>
+        <Text style={styles.textButton}>Post</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={props.onProfile}>
-        <Text>Profile</Text>
+        <Text style={styles.textButton}>Profile</Text>
       </TouchableOpacity>
     </View>
   );
@@ -20,18 +20,22 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "row",
-    backgroundColor: "rgba(50, 50, 255, 0.7)",
+    backgroundColor: "rgba(151, 10, 10, 1)",
     alignItems: "center",
     justifyContent: "space-evenly",
     position: "absolute",
     height: 30,
     width: "100%",
-    bottom: 1,
+    bottom: 0,
   },
 
   button: {
     borderColor: "black",
     marginLeft: 2,
     marginRight: 2,
+  },
+
+  textButton: {
+    color: "white",
   },
 });

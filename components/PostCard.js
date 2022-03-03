@@ -55,16 +55,16 @@ export default function PostCard(props) {
 
 const styles = StyleSheet.create({
   container: {
-    borderColor: "blue",
+    borderColor: "rgba(151, 10, 10, 0.8)",
     borderWidth: 1,
     borderRadius: 5,
-    backgroundColor: "rgba(0, 0, 0, 0.1)",
     margin: 5,
     width: 300,
   },
 
   username: {
-    fontSize: 20,
+    fontSize: 15,
+    fontStyle: "italic",
     margin: 10,
     fontWeight: "bold",
   },
@@ -76,11 +76,12 @@ const styles = StyleSheet.create({
 
   text: {
     fontSize: 20,
-    margin: 5,
+    margin: 20,
+    textAlign: "center",
   },
 
   comment: {
-    color: "blue",
+    color: "rgba(151, 10, 10, 0.9)",
     textAlign: "right",
     marginRight: 10,
     marginBottom: 10,
