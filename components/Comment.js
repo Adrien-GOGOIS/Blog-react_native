@@ -29,7 +29,7 @@ export default function Comment() {
           onChangeText={setUserInput}
         />
         <TouchableOpacity style={styles.button} onPress={handlePress}>
-          <Text>Commenter</Text>
+          <Text style={styles.textButton}>Commenter</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -63,6 +63,10 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(100, 150, 255, 0.7)",
     borderRadius: 5,
     margin: 5,
+  },
+
+  textButton: {
+    textAlign: "center",
   },
 
   title: {

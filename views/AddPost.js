@@ -19,21 +19,28 @@ export default function AddPost() {
 
   // State du post dans l'input
   const [textInput, setTextInput] = useState([]);
+  const [toggle, setToggle] = useState(false);
 
   // Fonction de push du post dans le context de l'app pour réutilisation dans Timeline
   const handleSubmit = () => {
-    fetch("https://jsonplaceholder.typicode.com/posts", {
-      method: "POST",
-      body: JSON.stringify({
-        body: textInput,
-        userId: 1,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((response) => response.json())
-      .then((json) => userState.userPost.push([json.body]));
+    if (textInput.length > 0) {
+      fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        body: JSON.stringify({
+          body: textInput,
+          userId: 1,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => userState.userPost.push([json.body]));
+
+      setToggle((prev) => !prev);
+    } else {
+      setToggle(false);
+    }
   };
 
   return (
@@ -48,6 +55,11 @@ export default function AddPost() {
         <TouchableOpacity onPress={handleSubmit} style={styles.button}>
           <Text style={styles.textButton}>Soumettre</Text>
         </TouchableOpacity>
+        {toggle ? (
+          <Text style={styles.valid}>Post publié !</Text>
+        ) : (
+          <Text style={styles.invalid}>Entrez au moins 1 mot pour publier</Text>
+        )}
       </View>
     </SafeAreaView>
   );
@@ -89,5 +101,13 @@ const styles = StyleSheet.create({
     fontSize: 40,
     margin: 20,
     fontWeight: "bold",
+  },
+
+  valid: {
+    color: "green",
+  },
+
+  invalid: {
+    color: "red",
   },
 });
