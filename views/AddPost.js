@@ -46,7 +46,7 @@ export default function AddPost() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>AddPost</Text>
-      <View style={styles.container}>
+      <View style={styles.container2}>
         <TextInput
           style={styles.input}
           placeholder="Ecrivez ce qui vous passe par la tête"
@@ -73,20 +73,27 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 
+  container2: {
+    flex: 3,
+    alignItems: "center",
+  },
+
   input: {
-    borderColor: "black",
+    borderColor: "grey",
+    borderWidth: 1,
     width: 300,
-    height: 100,
+    height: 200,
     textAlign: "center",
-    backgroundColor: "rgba(200, 200, 200, 0.6)",
+    backgroundColor: "rgba(200, 200, 200, 0.2)",
     borderRadius: 15,
+    marginTop: 50,
   },
 
   button: {
     borderColor: "black",
     borderWidth: 1,
     textAlign: "center",
-    height: 20,
+    height: 30,
     width: 200,
     backgroundColor: "rgba(100, 150, 255, 0.7)",
     borderRadius: 5,
@@ -95,6 +102,7 @@ const styles = StyleSheet.create({
 
   textButton: {
     textAlign: "center",
+    paddingTop: 5,
   },
 
   title: {

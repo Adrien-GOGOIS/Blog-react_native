@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
     width: 200,
     height: 30,
     textAlign: "center",
-    backgroundColor: "rgba(200, 200, 200, 0.6)",
-    borderRadius: 15,
+    borderWidth: 1,
+    borderRadius: 2,
   },
 
   button: {

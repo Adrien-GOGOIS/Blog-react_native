@@ -47,11 +47,11 @@ const styles = StyleSheet.create({
 
   input: {
     borderColor: "black",
+    borderWidth: 1,
     width: 200,
     height: 20,
     textAlign: "center",
-    backgroundColor: "rgba(200, 200, 200, 0.6)",
-    borderRadius: 15,
+    borderRadius: 5,
     margin: 5,
   },
 
