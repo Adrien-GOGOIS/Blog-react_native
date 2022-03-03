@@ -42,8 +42,8 @@ export default function AddPost() {
   };
 
   return (
-    <SafeAreaView>
-      <Text>AddPost</Text>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.title}>AddPost</Text>
       <View style={styles.container}>
         <TextInput
           style={styles.input}
@@ -68,9 +68,27 @@ const styles = StyleSheet.create({
 
   input: {
     borderColor: "black",
+    width: 500,
+    height: 300,
+    textAlign: "center",
+    backgroundColor: "rgba(200, 200, 200, 0.6)",
+    borderRadius: 15,
   },
 
   button: {
     borderColor: "black",
+    borderWidth: 1,
+    textAlign: "center",
+    height: 50,
+    width: 200,
+    backgroundColor: "rgba(100, 150, 255, 0.7)",
+    borderRadius: 5,
+    margin: 20,
+  },
+
+  title: {
+    fontSize: 40,
+    margin: 20,
+    fontWeight: "bold",
   },
 });

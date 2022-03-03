@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "row",
-    backgroundColor: "#fff",
+    backgroundColor: "rgba(50, 50, 255, 0.7)",
     alignItems: "center",
     justifyContent: "space-evenly",
     position: "absolute",

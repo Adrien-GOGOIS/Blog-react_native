@@ -49,9 +49,21 @@ const styles = StyleSheet.create({
 
   input: {
     borderColor: "black",
+    width: 200,
+    height: 30,
+    textAlign: "center",
+    backgroundColor: "rgba(200, 200, 200, 0.6)",
+    borderRadius: 15,
   },
 
   button: {
     borderColor: "black",
+    borderWidth: 1,
+    textAlign: "center",
+    height: 20,
+    width: 200,
+    backgroundColor: "rgba(100, 150, 255, 0.7)",
+    borderRadius: 5,
+    margin: 20,
   },
 });

@@ -1,7 +1,7 @@
 import { View, Text, SafeAreaView, StyleSheet } from "react-native";
 
 // Imports react
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 // Context
 import { UserContext } from "../App";
@@ -16,10 +16,10 @@ export default function Timeline() {
   console.log("TEST", userState.userPost);
 
   return (
-    <SafeAreaView>
-      <Text>Timeline</Text>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.title}>Feed</Text>
       <FlatList
-        data={userState.userPost}
+        data={userState.userPost.reverse()}
         renderItem={(data) => <PostCard text={data.item} />}
         keyExtractor={(data, index) => index.toString()}
         ItemSeparatorComponent={() => (
@@ -38,7 +38,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 
-  list: {
-    borderBottomWidth: 1,
+  title: {
+    fontSize: 40,
+    margin: 30,
+    fontWeight: "bold",
   },
 });

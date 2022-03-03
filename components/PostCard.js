@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 // Imports react
 import { useContext, useState } from "react";
@@ -11,9 +11,31 @@ export default function PostCard(props) {
   const userState = useContext(UserContext);
 
   return (
-    <View>
-      <Text>{userState.userName}</Text>
-      <Text>{props.text}</Text>
+    <View style={styles.container}>
+      <Text style={styles.username}>{userState.userName}</Text>
+      <Text style={styles.text}>{props.text}</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    borderColor: "blue",
+    borderWidth: 1,
+    borderRadius: 5,
+    backgroundColor: "rgba(0, 0, 0, 0.1)",
+    margin: 5,
+    width: 300,
+  },
+
+  username: {
+    fontSize: 20,
+    margin: 10,
+    fontWeight: "bold",
+  },
+
+  text: {
+    fontSize: 20,
+    margin: 5,
+  },
+});
