@@ -27,8 +27,18 @@ export default function AddPost() {
 
   // Fonction de push du post dans le context de l'app pour réutilisation dans Timeline
   const handleSubmit = () => {
-    console.log("STATE", userState.userPost);
-    userState.userPost.push([textInput]);
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      body: JSON.stringify({
+        body: textInput,
+        userId: 1,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => userState.userPost.push([json.body]));
   };
 
   return (
